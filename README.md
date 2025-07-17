@@ -1,6 +1,19 @@
 # trello-rtl-smart-helper
 Smart extension for RTL support in Trello
 
+
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/2e2a5b03-c150-4edf-b476-dbd5b5733766" alt="screenshot1" style="width:100%; max-width:600px;" />
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/61f8177b-1064-4981-b8cc-28363f26c7c9" alt="screenshot2" style="width:100%; max-width:600px;" />
+    </td>
+  </tr>
+</table>
+
+
 Trello RTL Helper automatically detects and properly displays Arabic, Persian, Hebrew, Urdu, and other RTL languages in Trello. No more misaligned text or broken layouts when working with multilingual teams!
 
 # Key Features:
