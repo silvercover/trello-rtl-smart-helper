@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "Trello RTL Smart Helper",
+  "version": "1.0.0",
+  "description": "Smart extension for RTL support in Trello",
+  "permissions": [
+    "activeTab",
+    "https://trello.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://trello.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "Trello RTL Helper"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "applications": {
+    "gecko": {
+      "strict_min_version": "60.0"
+    }
+  }
+}

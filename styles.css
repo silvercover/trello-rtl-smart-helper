@@ -1,0 +1,255 @@
+/* Base styles for RTL content */
+.rtl-content {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+.ltr-content {
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+/* Enhanced display for ak-renderer-wrapper */
+.ak-renderer-wrapper.rtl-content {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+.ak-renderer-wrapper.rtl-content p,
+.ak-renderer-wrapper.rtl-content div,
+.ak-renderer-wrapper.rtl-content span {
+    text-align: right !important;
+    direction: rtl !important;
+}
+
+/* Force LTR for code elements and Latin links */
+.force-ltr {
+    direction: ltr !important;
+    text-align: left !important;
+    unicode-bidi: embed !important;
+}
+
+/* Code element base styles */
+code,
+.ak-renderer-wrapper code {
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace !important;
+    white-space: pre !important;
+}
+
+/* Ensure code elements stay LTR even in RTL contexts */
+.rtl-content code,
+.ak-renderer-wrapper.rtl-content code,
+.ak-renderer-wrapper code {
+    direction: ltr !important;
+    text-align: left !important;
+    unicode-bidi: embed !important;
+    display: inline-block !important;
+}
+
+/* Force LTR for Latin-only links */
+.rtl-content a.force-ltr,
+.ak-renderer-wrapper.rtl-content a.force-ltr,
+.ak-renderer-wrapper a.force-ltr {
+    direction: ltr !important;
+    text-align: left !important;
+    unicode-bidi: embed !important;
+    display: inline-block !important;
+}
+
+/* Smart anchor direction based on content */
+.ak-renderer-wrapper a.rtl-content {
+    direction: rtl !important;
+    text-align: right !important;
+    unicode-bidi: embed !important;
+}
+
+.ak-renderer-wrapper a.ltr-content {
+    direction: ltr !important;
+    text-align: left !important;
+    unicode-bidi: embed !important;
+}
+
+/* Board tile details name styling */
+.board-tile-details-name.rtl-content {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+.board-tile-details-name.ltr-content {
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+/* Special settings for ul inside ak-renderer-wrapper */
+.ak-renderer-wrapper ul {
+    padding-left: 0 !important;
+    padding-right: 24px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.ak-renderer-wrapper.rtl-content ul {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+.ak-renderer-wrapper.ltr-content ul {
+    direction: ltr !important;
+    text-align: left !important;
+    padding-left: 24px !important;
+    padding-right: 0 !important;
+}
+
+/* Additional settings for li inside these ul */
+.ak-renderer-wrapper.rtl-content ul li {
+    text-align: right !important;
+    direction: rtl !important;
+}
+
+.ak-renderer-wrapper.ltr-content ul li {
+    text-align: left !important;
+    direction: ltr !important;
+}
+
+/* But ensure code and force-ltr elements in li stay LTR */
+.ak-renderer-wrapper.rtl-content ul li code,
+.ak-renderer-wrapper.rtl-content ul li .force-ltr {
+    direction: ltr !important;
+    text-align: left !important;
+    unicode-bidi: embed !important;
+}
+
+/* Maintain correct spacing for nested ul */
+.ak-renderer-wrapper.rtl-content ul ul {
+    padding-right: 20px !important;
+    padding-left: 0 !important;
+}
+
+.ak-renderer-wrapper.ltr-content ul ul {
+    padding-left: 20px !important;
+    padding-right: 0 !important;
+}
+
+/* Enhanced checklist display */
+[data-testid="checklist-container"].rtl-content {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+[data-testid="checklist-container"].ltr-content {
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+[data-testid="checklist-container"].rtl-content * {
+    text-align: right !important;
+    direction: rtl !important;
+}
+
+[data-testid="checklist-container"].ltr-content * {
+    text-align: left !important;
+    direction: ltr !important;
+}
+
+/* Enhanced comments display */
+[data-testid="comment-container"].rtl-content {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+[data-testid="comment-container"].ltr-content {
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+[data-testid="comment-container"].rtl-content * {
+    text-align: right !important;
+    direction: rtl !important;
+}
+
+[data-testid="comment-container"].ltr-content * {
+    text-align: left !important;
+    direction: ltr !important;
+}
+
+/* Enhanced card name display */
+[data-testid="card-name"].rtl-content {
+    text-align: right !important;
+    direction: rtl !important;
+}
+
+[data-testid="card-name"].ltr-content {
+    text-align: left !important;
+    direction: ltr !important;
+}
+
+/* Enhanced list name display */
+[data-testid="list-name"].rtl-content {
+    text-align: right !important;
+    direction: rtl !important;
+}
+
+[data-testid="list-name"].ltr-content {
+    text-align: left !important;
+    direction: ltr !important;
+}
+
+/* Additional settings for better UX */
+.rtl-content ul,
+.rtl-content ol {
+    text-align: right !important;
+    margin-right: 0 !important;
+    margin-left: auto !important;
+}
+
+.rtl-content li {
+    text-align: right !important;
+}
+
+.ltr-content ul,
+.ltr-content ol {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+.ltr-content li {
+    text-align: left !important;
+}
+
+/* Responsive settings for mobile */
+@media (max-width: 768px) {
+    .ak-renderer-wrapper ul {
+        padding-right: 16px !important;
+    }
+    
+    .ak-renderer-wrapper.ltr-content ul {
+        padding-left: 16px !important;
+        padding-right: 0 !important;
+    }
+    
+    .ak-renderer-wrapper ul ul {
+        padding-right: 12px !important;
+    }
+    
+    .ak-renderer-wrapper.ltr-content ul ul {
+        padding-left: 12px !important;
+        padding-right: 0 !important;
+    }
+}
+
+/* Smooth animation for direction changes */
+.ak-renderer-wrapper,
+[data-testid="checklist-container"],
+[data-testid="comment-container"],
+[data-testid="card-name"],
+[data-testid="list-name"],
+.board-tile-details-name {
+    transition: direction 0.2s ease, text-align 0.2s ease;
+}
+
+/* Prevent transitions on force-ltr elements */
+.force-ltr,
+code {
+    transition: none !important;
+}
